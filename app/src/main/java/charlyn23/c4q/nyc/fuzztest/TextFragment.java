@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class TextFragment extends Fragment {
 
     public static View rootView;
-    ListView listView;
+    ListView textListView;
     ArrayList<JSONObject> items;
     JSONObject item;
 
@@ -28,10 +28,10 @@ public class TextFragment extends Fragment {
         super.onCreate(savedInstanceState);
         ArrayList<JSONObject> items = DataGetter.getItems();
 
-        rootView = inflater.inflate(R.layout.fragment_full_content, container, false);
-        listView = (ListView)rootView.findViewById(R.id.listView);
-        TextContentAdapter adapter = new TextContentAdapter(getActivity(), R.layout.mylist, items );
-        listView.setAdapter(adapter);
+        rootView = inflater.inflate(R.layout.fragment_text, container, false);
+        textListView = (ListView)rootView.findViewById(R.id.textListView);
+        TextContentAdapter adapter = new TextContentAdapter(getActivity(), R.layout.pic_and_text_list, items );
+        textListView.setAdapter(adapter);
 
 
         return rootView;

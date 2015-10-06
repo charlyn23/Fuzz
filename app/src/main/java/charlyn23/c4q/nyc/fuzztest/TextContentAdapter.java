@@ -29,7 +29,7 @@ public class TextContentAdapter extends ArrayAdapter<JSONObject> {
 
 
     public TextContentAdapter(Context context, int resource, List<JSONObject> items) {
-        super(context, R.layout.mylist, DataGetter.getItems());
+        super(context, R.layout.pic_and_text_list, items);
         this.context = context;
 
     }
@@ -48,7 +48,7 @@ public class TextContentAdapter extends ArrayAdapter<JSONObject> {
 //                (Activity.LAYOUT_INFLATER_SERVICE);
 
         if (view == null) {
-            view = LayoutInflater.from(context).inflate(R.layout.mylist, parent, false);
+            view = LayoutInflater.from(context).inflate(R.layout.pic_and_text_list, parent, false);
             holder = new ViewHolder();
             holder.data = (TextView)view.findViewById(R.id.data);
             holder.date = (TextView)view.findViewById(R.id.date);

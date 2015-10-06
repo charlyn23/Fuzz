@@ -32,7 +32,7 @@ public class FullContentAdapter extends ArrayAdapter<JSONObject> {
 
 
     public FullContentAdapter(Context context, int resource, List<JSONObject> items) {
-        super(context, R.layout.mylist, DataGetter.getItems());
+        super(context, R.layout.pic_and_text_list, DataGetter.getItems());
         this.context = context;
 
 
@@ -54,7 +54,7 @@ public class FullContentAdapter extends ArrayAdapter<JSONObject> {
 //                (Activity.LAYOUT_INFLATER_SERVICE);
 
         if (view == null) {
-            view = LayoutInflater.from(context).inflate(R.layout.mylist, parent, false);
+            view = LayoutInflater.from(context).inflate(R.layout.pic_and_text_list, parent, false);
             holder = new ViewHolder();
             holder.data = (TextView)view.findViewById(R.id.data);
             holder.date = (TextView)view.findViewById(R.id.date);

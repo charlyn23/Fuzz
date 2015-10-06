@@ -20,7 +20,7 @@ import android.widget.Toast;
 public class HomeActivity extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
-    private ListView listView;
+    private ListView navDrawer;
     private String[] fragmentTitles;
     private Fragment fragment;
     private ActionBarDrawerToggle drawerToggle;
@@ -44,12 +44,12 @@ public class HomeActivity extends AppCompatActivity {
 
         fragmentTitles = getResources().getStringArray(R.array.fragmentTitles);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
-        listView = (ListView) findViewById(R.id.listView);
+        navDrawer = (ListView) findViewById(R.id.navDrawer);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 this, android.R.layout.simple_list_item_1, fragmentTitles);
-        listView.setAdapter(adapter);
-        listView.setOnItemClickListener(new DrawerItemClickListener());
+        navDrawer.setAdapter(adapter);
+        navDrawer.setOnItemClickListener(new DrawerItemClickListener());
 
 
     }
@@ -81,8 +81,8 @@ public class HomeActivity extends AppCompatActivity {
         fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
 
         //Once an item is selected in drawerlist, close the drawer
-        listView.setItemChecked(position, true);
-        drawerLayout.closeDrawer(listView);
+        navDrawer.setItemChecked(position, true);
+        drawerLayout.closeDrawer(navDrawer);
 
 
     }

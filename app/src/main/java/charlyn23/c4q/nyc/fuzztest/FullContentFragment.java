@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class FullContentFragment extends Fragment {
 
     public static View rootView;
-    ListView listView;
+    ListView fullContentListView;
     ArrayList<JSONObject> items;
     JSONObject item;
 
@@ -33,9 +33,9 @@ public class FullContentFragment extends Fragment {
         ArrayList<JSONObject> items = DataGetter.getItems();
 
         rootView = inflater.inflate(R.layout.fragment_full_content, container, false);
-        listView = (ListView)rootView.findViewById(R.id.listView);
-        FullContentAdapter adapter = new FullContentAdapter(getActivity(), R.layout.mylist, items );
-        listView.setAdapter(adapter);
+        fullContentListView = (ListView)rootView.findViewById(R.id.fullContentListView);
+        FullContentAdapter adapter = new FullContentAdapter(getActivity(), R.layout.pic_and_text_list, items );
+        fullContentListView.setAdapter(adapter);
 
         showWebView();
         return rootView;
