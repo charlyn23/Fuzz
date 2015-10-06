@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Fuzz</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string-array
+        name="fragmentTitles">
+        <item>Home</item>
+        <item>I want it All</item>
+        <item>Text</item>
+        <item>Pics</item>
+    </string-array>
+</resources>

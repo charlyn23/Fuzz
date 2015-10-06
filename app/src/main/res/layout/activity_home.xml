@@ -1,0 +1,56 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!--/This is where the fragment will go. Frame layout must be the first child -->
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <RelativeLayout
+            android:orientation="vertical" android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/teal">
+
+            <ImageView
+                android:layout_width="325dp"
+                android:layout_height="433dp"
+                android:id="@+id/imageView"
+                android:src="@drawable/fuzz"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Fuzz Test"
+                android:textSize="30sp"
+                android:id="@+id/textView"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="59dp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+
+    <ListView android:id="@+id/listView"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:background="#CCC" />
+
+
+
+</android.support.v4.widget.DrawerLayout>
