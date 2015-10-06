@@ -6,10 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebViewFragment;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -35,16 +32,13 @@ public class TextContentAdapter extends ArrayAdapter<JSONObject> {
         super(context, R.layout.mylist, DataGetter.getItems());
         this.context = context;
 
-
-
-
     }
 
     static class ViewHolder {
         TextView id;
         TextView data;
         TextView date;
-        ImageView icon;
+//        ImageView icon;
     }
 
     public View getView(int position,View view,ViewGroup parent) {
@@ -54,7 +48,6 @@ public class TextContentAdapter extends ArrayAdapter<JSONObject> {
 //                (Activity.LAYOUT_INFLATER_SERVICE);
 
         if (view == null) {
-//            view = inflater.inflate(R.layout.mylist, null);
             view = LayoutInflater.from(context).inflate(R.layout.mylist, parent, false);
             holder = new ViewHolder();
             holder.data = (TextView)view.findViewById(R.id.data);
@@ -80,17 +73,17 @@ public class TextContentAdapter extends ArrayAdapter<JSONObject> {
 
                 String type = fullContentItem.getString("type");
 
-                if (type.equals("image")) {
-                    Picasso.with(context)
-                            .load(data)
-                            .into(holder.icon);
-                }
-                else if (type.equals("text")){
-//                    homeActivity.addShowHideListener(holder, webViewFragment);
-
-
-
-                }
+//                if (type.equals("image")) {
+//                    Picasso.with(context)
+//                            .load(data)
+//                            .into(holder.icon);
+//                }
+//                else if (type.equals("text")){
+////                    homeActivity.addShowHideListener(holder, webViewFragment);
+//
+//
+//
+//                }
 
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -100,11 +93,11 @@ public class TextContentAdapter extends ArrayAdapter<JSONObject> {
         return view;
     }
 
-    public void loadImage() throws JSONException {
-        Picasso.with(getContext())
-                .load(fullContentItem.getString("data"))
-                .into(holder.icon);
-    }
+//    public void loadImage() throws JSONException {
+//        Picasso.with(getContext())
+//                .load(fullContentItem.getString("data"))
+//                .into(holder.icon);
+//    }
 
 
 

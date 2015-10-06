@@ -54,7 +54,6 @@ public class FullContentAdapter extends ArrayAdapter<JSONObject> {
 //                (Activity.LAYOUT_INFLATER_SERVICE);
 
         if (view == null) {
-//            view = inflater.inflate(R.layout.mylist, null);
             view = LayoutInflater.from(context).inflate(R.layout.mylist, parent, false);
             holder = new ViewHolder();
             holder.data = (TextView)view.findViewById(R.id.data);

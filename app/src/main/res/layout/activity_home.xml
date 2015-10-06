@@ -5,7 +5,6 @@
     android:layout_height="match_parent">
 
 
-    <!--/This is where the fragment will go. Frame layout must be the first child -->
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
